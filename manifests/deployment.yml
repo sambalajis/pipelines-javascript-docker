@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sambalajispipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sambalajispipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sambalajispipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sambalajispipelinesjavascriptdocker 
+          image: demodevreg.azurecr.io/sambalajispipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
